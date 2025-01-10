@@ -9,7 +9,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
+    
+<style>
+    button, .card {
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    button:hover, .card:hover {
+        transform: scale(1.03);
+    }
+
+    .toggle-description:focus {
+        outline: 2px solid var(--link-color);
+        outline-offset: 2px;
+    }
+</style>
+<style>
         :root {
             --bg-color: #f7f9fc;
             --text-color: #333;
@@ -128,7 +143,13 @@
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Alternar Modo</button>
 
     <div class="container">
+        
         <header>
+            <h1>Orçamento Interativo Completo</h1>
+            <p>Configuração de Plataforma de Streaming – Sarau Brasilis</p>
+            <p>Olá, <span id="client-name">Luiz</span>! Aqui está o seu orçamento.</p>
+        </header>
+
             <h1>Orçamento Interativo Completo</h1>
             <p>Configuração de Plataforma de Streaming – Sarau Brasilis</p>
         </header>
@@ -199,18 +220,17 @@
 
         <!-- Tools and Hosting Section -->
         <div class="tools-summary">
-            <h5>Custos com Ferramentas e Hospedagem</h5>
+            <h5>Custos com Ferramenta, Hospedagem e Domínio</h5>
             <ul>
                 <li><strong>Plano Starter Vimeo OTT:</strong> US$ 1 por assinante/mês + taxas de transação.</li>
                 <li><strong>Hospedagem e Domínio:</strong> Aproximadamente R$ 300,00/ano.</li>
             </ul>
-            <p><strong>Valor Estimado: Dependente do número de assinantes.</strong></p>
         </div>
 
         <!-- Total Section -->
         <div class="total-summary">
             <h5>Valor Total Estimado</h5>
-            <p><strong>R$ <span id="total-price">2.000,00</span></strong></p>
+            <p><strong>R$ <span id="total-price">2.000,00</span> + Custos com Ferramentas e Hospedagem</strong></p>
         </div>
 
         
@@ -233,7 +253,21 @@
             <p>Este serviço é opcional e pode ser contratado após o término do projeto inicial.</p>
         </div>
 
-</div>
+
+        <!-- Validity Section -->
+        <div class="info-box">
+            <h5>Validade do Orçamento</h5>
+            <p>Este orçamento é válido por 30 dias a partir da data de envio.</p>
+        </div>
+
+
+        <!-- Educational Info Section -->
+        <div class="info-box">
+            <h5>Informações Educativas</h5>
+            <p>Para mais informações sobre como funciona o Vimeo OTT, acesse a <a href="https://vimeo.com/ott" target="_blank">documentação oficial do Vimeo OTT</a>.</p>
+            <p>Em caso de dúvidas, sinta-se à vontade para entrar em contato.</p>
+        </div>
+
     </div>
 
     <!-- Scripts -->
